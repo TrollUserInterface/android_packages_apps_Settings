@@ -31,7 +31,7 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := \
         $(call all-java-files-under, src) \
-        $(call all-java-files-under, ../Venom/src) \
+        $(call all-java-files-under, ../Ecem/src) \
         $(call all-java-files-under, ../../../vendor/ecem/colorengine/common/src) \
         $(call all-java-files-under, ../../../vendor/ecem/colorengine/themechooser/src) \
         src/com/android/settings/EventLogTags.logtags
@@ -41,7 +41,7 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     frameworks/support/v14/preference/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/recyclerview/res \
-    packages/apps/Venom/res \
+    packages/apps/Ecem/res \
     vendor/ecem/colorengine/themechooser/res
 
 # EcemUI Color Engine
