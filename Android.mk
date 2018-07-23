@@ -32,8 +32,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := \
         $(call all-java-files-under, src) \
         $(call all-java-files-under, ../Venom/src) \
-        $(call all-java-files-under, ../../../vendor/viper/colorengine/common/src) \
-        $(call all-java-files-under, ../../../vendor/viper/colorengine/themechooser/src) \
+        $(call all-java-files-under, ../../../vendor/ecem/colorengine/common/src) \
+        $(call all-java-files-under, ../../../vendor/ecem/colorengine/themechooser/src) \
         src/com/android/settings/EventLogTags.logtags
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
@@ -42,11 +42,11 @@ LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
     frameworks/support/v7/appcompat/res \
     frameworks/support/v7/recyclerview/res \
     packages/apps/Venom/res \
-    vendor/viper/colorengine/themechooser/res
+    vendor/ecem/colorengine/themechooser/res
 
-# Viper Color Engine
-$(warning *** Including Viper Color Engine ***)
-LOCAL_RESOURCE_DIR += vendor/viper/colorengine/$(LOCAL_PATH)/res
+# EcemUI Color Engine
+$(warning *** Including EcemUI Color Engine ***)
+LOCAL_RESOURCE_DIR += vendor/ecem/colorengine/$(LOCAL_PATH)/res
 
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform

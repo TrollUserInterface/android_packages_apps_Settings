@@ -156,7 +156,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         if(mMbnVersion == null){
             getPreferenceScreen().removePreference(findPreference(KEY_MBN_VERSION));
         }
-        setValueSummary(KEY_VIPER_VERSION, "ro.viper.version");
+        setValueSummary(KEY_VIPER_VERSION, "ro.ecem.version");
         findPreference(KEY_VIPER_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
@@ -221,7 +221,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 "safety_info", "android.settings.SHOW_SAFETY_AND_REGULATORY_INFO");
 
         mViperOTA = (PreferenceScreen) findPreference(KEY_VIPEROTA);
-        String buildtype = SystemProperties.get("ro.viper.buildtype","unofficial");
+        String buildtype = SystemProperties.get("ro.ecem.buildtype","unofficial");
         if (!buildtype.equalsIgnoreCase("official") || !PackageUtils.isAppInstalled(getActivity(), KEY_VIPEROTA_PACKAGE_NAME)) {
             getPreferenceScreen().removePreference(mViperOTA);
         }
