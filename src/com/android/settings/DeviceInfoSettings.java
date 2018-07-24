@@ -88,7 +88,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_MOD_BUILD_DATE = "build_date";
 
     private static final String KEY_VIPEROTA = "viper_ota";
-    private static final String KEY_VIPEROTA_PACKAGE_NAME = "com.viper.ota";
+    private static final String KEY_VIPEROTA_PACKAGE_NAME = "com.ecem.ota";
 
     private PreferenceScreen mViperOTA;
 

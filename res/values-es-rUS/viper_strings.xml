@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Android Open Source Project
-     Copyright (C) 2017 ViperOs Project
+     Copyright (C) 2017 EcemUI Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -14,16 +14,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- General strings -->
-    <string name="header_category_custom">Adiciones Viper</string>
-    <string name="venom_title">Venom</string>
+    <string name="header_category_custom">Adiciones EcemUI</string>
+    <string name="venom_title">EcemUI</string>
     <string name="venom_title_summary">Caracteristicas &amp; Personalización</string>
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Personalizar el tema del dispositivo</string>
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Root management</string>
 
-    <!-- About phone screen, ViperOs version -->
-    <string name="viper_version_title">Versión de ViperOS</string>
+    <!-- About phone screen, EcemUI version -->
+    <string name="viper_version_title">Versión de EcemUI</string>
     <string name="viper_version_default">Unknown</string>
 	
     <!-- Support Greeting -->
@@ -43,11 +43,11 @@
     <!-- Social category -->
     <string name="social_category_title">Social</string>
     <string name="google_preference_title">ViperPlus</string>
-    <string name="google_preference_title_summary">Manténgase en contacto con otros usuarios y desarrolladores de ViperOS en la comunidad de Google Plus</string>
+    <string name="google_preference_title_summary">Manténgase en contacto con otros usuarios y desarrolladores de EcemUI en la comunidad de Google Plus</string>
     <!-- Source category -->
     <string name="source_category_title">Source</string>
     <string name="github_preference_title">Github</string>
-    <string name="github_preference_title_summary">Para obtener la información más reciente sobre lo que ha mejorado en ViperOS, eche un vistazo a nuestro Github</string>
+    <string name="github_preference_title_summary">Para obtener la información más reciente sobre lo que ha mejorado en EcemUI, eche un vistazo a nuestro Github</string>
 	
     <!-- About phone screen, processor info label [CHAR LIMIT=40] --> 
     <string name="processor_info">Procesador</string>
