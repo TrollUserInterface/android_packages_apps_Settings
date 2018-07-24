@@ -84,13 +84,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String PROPERTY_QGP_VERSION = "persist.qgp.version";
     private static final String MBN_VERSION_PATH = "/persist/speccfg/mbnversion";
     private static final String QGP_VERSION_PATH = "/persist/speccfg/qgpversion";
-    private static final String KEY_VIPER_VERSION = "viper_version";
+    private static final String KEY_ECEM_VERSION = "ecem_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
 
-    private static final String KEY_VIPEROTA = "viper_ota";
-    private static final String KEY_VIPEROTA_PACKAGE_NAME = "com.ecem.ota";
+    private static final String KEY_ECEMOTA = "ecem_ota";
+    private static final String KEY_ECEMOTA_PACKAGE_NAME = "com.ecem.ota";
 
-    private PreferenceScreen mViperOTA;
+    private PreferenceScreen mEcemOTA;
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -156,8 +156,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         if(mMbnVersion == null){
             getPreferenceScreen().removePreference(findPreference(KEY_MBN_VERSION));
         }
-        setValueSummary(KEY_VIPER_VERSION, "ro.ecem.version");
-        findPreference(KEY_VIPER_VERSION).setEnabled(true);
+        setValueSummary(KEY_ECEM_VERSION, "ro.ecem.version");
+        findPreference(KEY_ECEM_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
@@ -220,10 +220,10 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         removePreferenceIfActivityMissing(
                 "safety_info", "android.settings.SHOW_SAFETY_AND_REGULATORY_INFO");
 
-        mViperOTA = (PreferenceScreen) findPreference(KEY_VIPEROTA);
+        mEcemOTA = (PreferenceScreen) findPreference(KEY_ECEMOTA);
         String buildtype = SystemProperties.get("ro.ecem.buildtype","unofficial");
-        if (!buildtype.equalsIgnoreCase("official") || !PackageUtils.isAppInstalled(getActivity(), KEY_VIPEROTA_PACKAGE_NAME)) {
-            getPreferenceScreen().removePreference(mViperOTA);
+        if (!buildtype.equalsIgnoreCase("official") || !PackageUtils.isAppInstalled(getActivity(), KEY_ECEMOTA_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(mEcemOTA);
         }
     }
 
@@ -247,7 +247,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference.getKey().equals(KEY_FIRMWARE_VERSION)
-                || preference.getKey().equals(KEY_VIPER_VERSION)) {
+                || preference.getKey().equals(KEY_ECEM_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
@@ -261,7 +261,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 }
 
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.putExtra("is_viper", preference.getKey().equals(KEY_VIPER_VERSION));
+                intent.putExtra("is_viper", preference.getKey().equals(KEY_ECEM_VERSION));
                 intent.setClassName("android",
                         com.android.internal.app.PlatLogoActivity.class.getName());
                 try {
